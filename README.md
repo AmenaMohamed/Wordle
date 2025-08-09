@@ -1,4 +1,4 @@
-Wordle game:
+# Wordle game:
 
 This game is based on inputing 5_letter word as a guess,
 you keep trying words until reaching 6 attempts 
@@ -16,6 +16,8 @@ I divided this game into 3 files main.py , input.py , logic.py for easy read and
 
 # logic.py: code logic of comparing 
 {uses 0 ,1 ,2 to encode each letter of the user input word}
+
+_______________________________________________________________________
 
 # program works as follows :
 1- importing words from txt file into "words[]" 
