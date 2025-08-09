@@ -47,6 +47,6 @@ ex: word = THESE , guess= HELLO by searching for each letter of HELLO in THESE.
         guess=[H,E,L,L,O]
 we get output=[2,2,0,0,0]
 
-that means that H, E in HELLO are present in THESE , but in wrong position , and rest of the word is not present.
+that means that the H, E in HELLO are indeed present in THESE , but in wrong position , and rest of the word is not present.
 
 
