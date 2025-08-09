@@ -8,18 +8,18 @@ and incorrect letters with gray.
 
 I divided this game into 3 files main.py , input.py , logic.py for easy read and mainapulation.
 
-### main.py :contains the main program 
+## main.py :contains the main program 
 {importing words from txt file to words[], picking a random word}
 
-### input.py :input data from the user
+## input.py :input data from the user
 {it has the words[], the random word "word" passed to it , have the comparision between the user input & randomly picked one }
 
-### logic.py: code logic of comparing 
+## logic.py: code logic of comparing 
 {uses 0 ,1 ,2 to encode each letter of the user input word}
 
 _______________________________________________________________________
 
-### program works as follows :
+## program works as follows :
 1- importing words from txt file into "words[]" 
 (using file reading commands) , then using "random" library to randomly choose a word from the list (main.py)
 
