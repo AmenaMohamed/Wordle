@@ -17,24 +17,29 @@ I divided this game into 3 files main.py , input.py , logic.py for easy read and
 # logic.py: code logic of comparing 
 {uses 0 ,1 ,2 to encode each letter of the user input word}
 
-the program works as follows :
-importing words from txt file into "words[]" (using file reading commands) , then using "random" library to randomly choose a word from the list (main.py)
+# program works as follows :
+1- importing words from txt file into "words[]" 
+(using file reading commands) , then using "random" library to randomly choose a word from the list (main.py)
 
-the randomly choosen word "word" and the list is passed to _input.py_
+2- the randomly choosen word "word" and the list is passed to
+ _input.py_
 by "import" , by using loop of 6 iterations "6 attempts" , user input is handled (unreal /too long/too short  words) and stored in "guess" without skipping an attempt ,
+
  if the guess is the same as word then ,print won message & exit program , else compare two words "compare()"(imported from _logic.py_)
 
 
-In _logic.py_ for each letter in word there is the number of it's repeation stored in R[] (list) 
+3- In _logic.py_ for each letter in word there is the number of it's repeation stored in R[] (list) 
 ex: word = THESE , R=[1,1,2,1,2] using "word.count()" 
 for each letter in guess there is an encoding (stored in "output[]")
 (number resemples it's state)
 ex: word = THESE , guess= HELLO by searching for each letter of HELLO in THESE.                        
 
-number |               state                 |  user interface
-0      |  in correct letter                  | "gray"
-1      |  correct letter in correct position | "green"
-2      |  correct letter in wrong position   | "yelow"
+
+     | number      |        state                 |    UI     |
+     | :---------: | :--------------------------: | --------: |
+     |     0       | wrong letter                 |   grey    |
+     |     1       | correct let. in correct pos. |   green   |
+     |     2       | correct let. in wrong   pos. |   yellow  |
 
 
         index= 0,1,2,3,4 (not a read list or though)
