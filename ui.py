@@ -16,15 +16,15 @@ def UI(guesslist, outputlist):
             match output[i]:
                 case 0:
                     # colour the letter grey
-                    letter += "\033[90m" + guess[i]
+                    letter += "\033[90m" + guess[i].upper()
 
                 case 1:
                     # colour the letter green
-                    letter += "\033[32m" + guess[i]
+                    letter += "\033[32m" + guess[i].upper()
 
                 case 2:
                     # colour the letter yellow
-                    letter += "\033[33m" + guess[i]
+                    letter += "\033[33m" + guess[i].upper()
 
             print(letter)  # join the letters to form the guess
 
