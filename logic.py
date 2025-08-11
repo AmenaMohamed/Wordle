@@ -1,4 +1,3 @@
-from main import word , guess
 #constant
 N= 4
 output=[0]*N
@@ -8,8 +7,8 @@ def compare(word,guess):
     for i in range(N):
         R[i]= guess.count(word[i]) 
         #count the repeation of each letter , assign it to it's index 
-        #encoding 
 
+    #encoding 
     for i in range(N):
         if word.find(guess[i])== -1 :
             output[i]= 0 #not found
