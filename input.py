@@ -27,10 +27,11 @@ for i in range(6):
            # if correct -> you won! "on the UI", break
         elif word == guess:
             print("you won!") 
+            UI(guesslist, outputlist)
             sys.exit()  #finish the program
         else:
             output = compare(word,guess) # storing the encoded list
-            outputlist.append[output] 
+            outputlist.append(output) 
             #for each guess[] there is an output[] with the same index
             #guesslist[0:6] -> outputlist[0:6]
     UI(guesslist, outputlist)
