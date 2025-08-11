@@ -1,6 +1,7 @@
 from main import words , word
 import sys
 from logic import compare
+from ui import UI
 
 #input the user guess "6 attempts = 6 iterations"
 
@@ -13,17 +14,17 @@ for i in range(6):
     
     if len(guess) < len(word):
         print("too small!")# handling user errors
-        i-=1
+        continue
 
     elif len(guess) > len(word):
         print("too long!")# handling user errors
-        i-=1
+        continue
     else:
-        guesslist.append(word)# add this new guess to the list
-        if guess.found(words)== -1:
+        guesslist.append(guess)# add this new guess to the list
+        if guess not in words:
             print("word not found")
-            i-=1
-           # if correct -> you won! "on the GUI", break
+            continue
+           # if correct -> you won! "on the UI", break
         elif word == guess:
             print("you won!") 
             sys.exit()  #finish the program
@@ -32,4 +33,4 @@ for i in range(6):
             outputlist.append[output] 
             #for each guess[] there is an output[] with the same index
             #guesslist[0:6] -> outputlist[0:6]
-
+    UI(guesslist, outputlist)
