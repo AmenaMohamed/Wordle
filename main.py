@@ -1,16 +1,38 @@
-import random # for easier random choice from the list
-
+from readfile import words , word
+import sys
 from logic import compare
+from ui import UI
 
-#import words to the code
-words = []
-with open('words.txt', 'r') as file:
-    for line in file: #read each line from the txt file
-        words.append(line.strip()) #add each line "word" to the words list
+#input the user guess "6 attempts = 6 iterations"
 
+word= word.lower()
+guesslist= []
+outputlist= []
 
-#randomly choose a word from the list "words[]"
-word = random.choice(words)
+for i in range(6):
+    guess=input("type in a word:").lower() #input from the GUI
+    
+    if len(guess) < len(word):
+        print("too small!")# handling user errors
+        continue
 
-print(word)
+    elif len(guess) > len(word):
+        print("too long!")# handling user errors
+        continue
+    else:
+        guesslist.append(guess)# add this new guess to the list
+        if guess not in words:
+            print("word not found")
+            continue
+           # if correct -> you won! "on the UI", break
+        elif word == guess:
+            print("you won!") 
+            sys.exit()  #finish the program
+        else:
+            output = compare(word,guess) # storing the encoded list
+            outputlist.append(output) 
+            #for each guess[] there is an output[] with the same index
+            #guesslist[0:6] -> outputlist[0:6]
+    UI(guesslist, outputlist)
 
+# If the user has used all attempts and didn't guess the word

@@ -6,7 +6,7 @@ def compare(word,guess):
     output=[0]*N  #note:when they were global all outputlist was changed according to the last one
     R=[0]*N
     for i in range(N):
-        R[i]= guess.count(word[i]) 
+        R[i]= guess.count(guess[i]) 
         #count the repeation of each letter , assign it to it's index 
 
     #encoding 
@@ -18,7 +18,7 @@ def compare(word,guess):
         elif R[i]!= 0:
             output[i] = 2 #found in incorrect pos
             R[i]-=1 # we found one of the repeations & encoded it
-
+        print(R)
     return output
 
    # else -> compare the guess to randomly choosen word , 
