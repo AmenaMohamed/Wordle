@@ -3,7 +3,7 @@ N= 5
 
 
 def compare(word,guess):
-    output=[0]*N
+    output=[0]*N  #note:when they were global all outputlist was changed according to the last one
     R=[0]*N
     for i in range(N):
         R[i]= guess.count(word[i]) 
