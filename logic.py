@@ -1,9 +1,10 @@
 #constant
-N= 4
-output=[0]*N
-R=[0]*N
+N= 5
+
 
 def compare(word,guess):
+    output=[0]*N
+    R=[0]*N
     for i in range(N):
         R[i]= guess.count(word[i]) 
         #count the repeation of each letter , assign it to it's index 

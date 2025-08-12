@@ -27,7 +27,6 @@ for i in range(6):
            # if correct -> you won! "on the UI", break
         elif word == guess:
             print("you won!") 
-            UI(guesslist, outputlist)
             sys.exit()  #finish the program
         else:
             output = compare(word,guess) # storing the encoded list
